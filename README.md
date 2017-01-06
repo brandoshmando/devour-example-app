@@ -1,7 +1,7 @@
 # Devour Example App
----
+-
 
-This app is an example app built using the [devour](https://github,com/brandoshmando/devour) python package. It is meant to
+This app is an example app built using the [devour](https://github.com/brandoshmando/devour) python package. It is meant to
 serve as a simple example of how devour can help you integrate kafka data streams into your python project.
 
 Devour was designed to make building stream processing workflows with pykafka and kafka as easy as possible. The following
@@ -9,7 +9,7 @@ will walk through the steps for installing and using the Devour Example App and 
 
 
 ### Setup
----
+-
 
 The most difficult task is setting up a kafka environment locally. For this, we are going to use [docker](https://www.docker.com/)
 and [Spotify's kafka/zookeeper docker container](https://github.com/spotify/docker-kafka). So we'll do the easy stuff first...
@@ -74,6 +74,6 @@ Wahoo! Now in the producer tab, you can send simply by typing in your desired me
 For the current `DefaultConsumer`, the message must be json serializable with two `int` kwargs, x and y.
 You should see the output of the `DefaultConsumer`'s digest message, which is adding x and y.
 
-When you're ready, take a look at the [Devour readme](https://github,com/brandoshmando/devour) and make changes
+When you're ready, take a look at the [Devour readme](https://github.com/brandoshmando/devour) and make changes
 to the default consumer's settings and digest method to get a better idea of how devour helps implement your kafka setup.
 Or write your own Devour consumer!
