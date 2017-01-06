@@ -27,15 +27,21 @@ docker.
 
 Once docker is up and running, run the following command to pull in the kafka container:
 
-`docker pull spotify/kafka`
+```
+docker pull spotify/kafka
+```
 
 To fire up a new virtual machine, run the following:
 
-`docker-machine start default`
+```
+docker-machine start default
+```
 
 Once the machine has started, set up the env within your shell by running the following:
 
-`eval $(docker-machine env)`
+```
+eval $(docker-machine env)
+```
 
 You're now ready to fire up kafka and zookeeper, with the following:
 
@@ -63,14 +69,18 @@ both of the previously opened tabs.
 
 In one of the tabs, fire up the producer with:
 
-`python producer.py`
+```
+python src/producer.py
+```
 
 And in the other tab, fire up the consumer with:
 
-`devour default`
+```
+devour default
+```
 
 Wahoo! Now in the producer tab, you can send simply by typing in your desired message and hitting enter.
-For the current `DefaultConsumer`, the message must be json serializable with two `int` kwargs, x and y.
+For the current `DefaultConsumer`, the message must be a json serializable dict with two keys, x and y, that have `int` values (Ex. `{"x":1, "y":3}`)
 You should see the output of the `DefaultConsumer`'s digest message, which is adding x and y.
 
 When you're ready, take a look at the [Devour readme](https://github.com/brandoshmando/devour) and make changes
