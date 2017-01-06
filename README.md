@@ -14,7 +14,7 @@ will walk through the steps for installing and using the Devour Example App and 
 The most difficult task is setting up a kafka environment locally. For this, we are going to use [docker](https://www.docker.com/)
 and [Spotify's kafka/zookeeper docker container](https://github.com/spotify/docker-kafka). So we'll do the easy stuff first...
 
-Clone and cd into the root devour-example-app folder. Create your virtualenv and install dependencies with:
+Clone and cd into the root `devour-sample-app` folder. Create your virtualenv and install dependencies with:
 
 ```python
 pip install -r requirements.txt
@@ -59,7 +59,7 @@ Run the following command to create a kafka topic with name `test`:
 
 `kafka-topics.sh --create --zookeeper $ZOOKEEPER --replication-factor 1 --partitions 1 --topic test`
 
-Finally, we can fire up the producer and consumer. Make sure that you are in the root folder of `devour-example-app` in
+Finally, we can fire up the producer and consumer. Make sure that you are in the root folder of `devour-sample-app` in
 both of the previously opened tabs.
 
 In one of the tabs, fire up the producer with:
