@@ -1,5 +1,6 @@
 import os
 from pykafka import KafkaClient
+import json
 
 kafka_hosts = os.environ['KAFKA']
 zk_hosts = os.environ['ZOOKEEPER']
@@ -13,7 +14,6 @@ with topic.get_producer() as producer:
         message = raw_input('Enter a message:')
         try:
             json.loads(message)
+            producer.produce(message)
         except:
             print "Input must be json serializable"
-
-        producer.produce(message)
