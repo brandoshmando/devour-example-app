@@ -1,5 +1,4 @@
 # Devour Example App
--
 
 This app is an example app built using the [devour](https://github.com/brandoshmando/devour) python package. It is meant to
 serve as a simple example of how devour can help you integrate kafka data streams into your python project.
