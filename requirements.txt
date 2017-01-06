@@ -1,0 +1,7 @@
+-e git+git@github.com:brandoshmando/devour.git@23aa1f6f643e7b0465f9a7f6c86c3d57872b0209#egg=devour-0.3
+gevent==1.2.0
+greenlet==0.4.11
+kazoo==2.2.1
+pykafka==2.5.0
+six==1.10.0
+tabulate==0.7.7
