@@ -1,10 +1,15 @@
 import os
 
-DEVOUR_ROUTES = {
+CONSUMER_ROUTES = {
     "default":"src.consumers.DefaultConsumer"
 }
 
-DEVOUR_CONFIG = {
-    'hosts': os.environ.get('KAFKA'),
-    'zookeeper_hosts': os.environ.get('ZOOKEEPER')
+KAFKA_CONFIG = {
+    'client': {
+        'hosts': os.environ.get('KAFKA'),
+        'zookeeper_hosts': os.environ.get('ZOOKEEPER'),
+    },
+    'consumer_routes': {
+        'default':'src.consumers.DefaultConsumer'
+    }
 }
